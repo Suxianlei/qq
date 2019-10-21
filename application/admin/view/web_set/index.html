@@ -1,0 +1,118 @@
+﻿{extend name="public/base"/}
+{block name="content"}
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont"></i> <a href="<{:url('Index/index')}>" class="maincolor">首页</a> <span class="c-999 en">&gt;</span><span class="c-666">网站设置</span></nav>
+	<div class="Hui-article">
+		<article class="cl pd-20">
+			<form action="<{:url('WebSet/setWeb')}>" method="post" class="form form-horizontal" id="form-admin-add">
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>网站名称：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" class="input-text" value="" placeholder="" id="webName" name="webName">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>关键词：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" class="input-text" value="" placeholder="" id="keyWord" name="keyWord">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3">描述：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<textarea name="description" cols="" rows="" class="textarea"></textarea>
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>客服电话：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" class="input-text" value="" placeholder="" id="phone" name="phone">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>邮箱：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" class="input-text" placeholder="@" name="email" id="email">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>备案号：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" class="input-text" value="" placeholder="" id="beiAn" name="beiAn">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>版权：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" class="input-text" value="" placeholder="" id="copyRight" name="copyRight">
+					</div>
+				</div>
+				<div class="row cl">
+					<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+						<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+					</div>
+				</div>
+			</form>
+		</article>
+	</div>
+</section>
+{/block}
+{block name="js"}
+<script type="text/javascript" src="__LIB__/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="__LIB__/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="__LIB__/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.skin-minimal input').iCheck({
+			checkboxClass: 'icheckbox-blue',
+			radioClass: 'iradio-blue',
+			increaseArea: '20%'
+		});
+
+		$("#form-admin-add").validate({
+			rules:{
+				webName:{
+					required:true,
+					minlength:4,
+					maxlength:64
+				},
+				keyWord:{
+					required:true,
+				},
+				phone:{
+					required:true,
+					isPhone:true,
+				},
+				email:{
+					required:true,
+					email:true,
+				},
+				beiAn:{
+					required:true,
+				},
+				copyRight:{
+					required:true,
+				},
+			},
+			onkeyup:false,
+			focusCleanup:true,
+			success:"valid",
+			submitHandler:function(form){
+				$(form).ajaxSubmit({
+					success:function (data) {
+						layer.msg(data.msg,{
+							time:3000
+						},function () {
+							location.href=data.url;
+						});
+					}
+				});
+				var index = parent.layer.getFrameIndex(window.name);
+				parent.$('.btn-refresh').click();
+				parent.layer.close(index);
+			}
+		});
+	});
+</script>
+{/block}
+

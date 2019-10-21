@@ -1,0 +1,71 @@
+{extend name="index/common" /}
+
+{block name="title"}案例内容{/block}
+
+{block name="head_limit"}
+<div class="head2">
+  {/block}
+
+  {block name="dao_hang"}
+  <li><a href="<{:url('Index/index')}>" target="_blank">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+  <li><a href="<{:url('Index/about')}>" target="_blank">关于我们</a></li>
+  <li><a href="<{:url('Index/about')}>" target="_blank">团队风采</a></li>
+  <li><a href="<{:url('Index/goods')}>" target="_blank">产品展示</a></li>
+  <li><a href="<{:url('Index/news')}>" target="_blank">新闻中心</a></li>
+  <li><a href="<{:url('Index/an_li')}>" target="_blank" id="hover_m">案例展示</a></li>
+  <li><a href="<{:url('Index/ren_cai')}>" target="_blank">人才加盟</a></li>
+  <li><a href="<{:url('Index/about')}>" target="_blank">联系我们</a></li>
+  <div class="clear"></div>
+  {/block}
+
+  {block name="content_text"}
+  <div class="mid_con"><!--中间内容开始-->
+    <div class="dingwei"><a href="#">首页</a>><a href="#">案例展示</a>><a href="#">案例详情</a></div>
+    <div class="about">
+      <div class="anli_le floatl"><!--左边详情-->
+        <div class="anli_le_top">
+          <div class="anli_le_top_zuo floatl"><img src="__UPLOAD__/<{$an_li_info.pic_url}>" width="328" height="205"></div>
+          <div class="anli_le_top_you floatr">
+            <h4><{$an_li_info.name}></h4>
+            <p>发布时间：2015-08-24</p>
+            <span>155</span>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="anli_le_bot">
+          <div class="anli_le_bot_top">案例详情</div>
+          <div class="anli_le_bot_bot">
+            <div class="double_top">
+            <{$an_li_info.article}>
+            </div>
+            <div class="double_bot">
+              <ul>
+                <li><img src="tupian/beixiao.jpg" width="234" height="146"></li>
+                <li><img src="tupian/beixiao.jpg" width="234" height="146"></li>
+                <li><img src="tupian/beixiao.jpg" width="234" height="146"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div><!--左边详情结束-->
+      <div class="anli_ri_1 floatr"><!--右边相关-->
+        <div class="anli_ri_top_1">相关案例</div>
+        <div class="anli_ri_bot_1">
+          <ul>
+            <li><a href="#"><img src="tupian/xianggal.jpg" width="162" height="101"></a><p><a href="#">相关案例</a></p></li>
+            <li><a href="#"><img src="tupian/xianggal.jpg" width="162" height="101"></a><p><a href="#">相关案例</a></p></li>
+            <li><a href="#"><img src="tupian/xianggal.jpg" width="162" height="101"></a><p><a href="#">相关案例</a></p></li>
+            <li><a href="#"><img src="tupian/xianggal.jpg" width="162" height="101"></a><p><a href="#">相关案例</a></p></li>
+            <li><a href="#"><img src="tupian/xianggal.jpg" width="162" height="101"></a><p><a href="#">相关案例</a></p></li>
+            <li><a href="#"><img src="tupian/xianggal.jpg" width="162" height="101"></a><p><a href="#">相关案例</a></p></li>
+            <li><a href="#"><img src="tupian/xianggal.jpg" width="162" height="101"></a><p><a href="#">相关案例</a></p></li>
+            <li><a href="#"><img src="tupian/xianggal.jpg" width="162" height="101"></a><p><a href="#">相关案例</a></p></li>
+          </ul>
+        </div>
+      </div><!--右边相关结束-->
+      <div class="clear"></div>
+    </div>
+  </div><!--中间内容结束-->
+  {/block}
+

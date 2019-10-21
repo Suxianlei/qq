@@ -1,0 +1,72 @@
+  {extend name="index/common" /}
+
+  {block name="title"}案例展示{/block}
+
+  {block name="head_limit"}
+    <div class="head2">
+  {/block}
+
+  {block name="dao_hang"}
+    <li><a href="<{:url('Index/index')}>" target="_blank">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+    <li><a href="<{:url('Index/about')}>" target="_blank">关于我们</a></li>
+    <li><a href="<{:url('Index/honour')}>" target="_blank">团队风采</a></li>
+    <li><a href="<{:url('Index/goods')}>" target="_blank">产品展示</a></li>
+    <li><a href="<{:url('Index/news')}>" target="_blank">新闻中心</a></li>
+    <li><a href="<{:url('Index/an_li')}>" target="_blank" id="hover_m">案例展示</a></li>
+    <li><a href="<{:url('Index/ren_cai')}>" target="_blank">人才加盟</a></li>
+    <li><a href="<{:url('Index/about')}>" target="_blank">联系我们</a></li>
+    <div class="clear"></div>
+  {/block}
+
+  {block name="content_text"}
+    <div class="mid_con"><!--中间内容开始-->
+    <div class="dingwei"><a href="#">首页</a>><a href="#">案例展示</a></div>
+    <div class="about">
+      <div class="about_le floatl">
+        <div class="about_le_top">案例展示</div>
+        <div class="about_le_bot">
+          <ul>
+            <li><a href="#" target="_blank" id="hov">案例子目一</a></li>
+            <li><a href="#" target="_blank">案例子目二</a></li>
+            <li><a href="#" target="_blank">案例子目三</a></li>
+            <li><a href="#" target="_blank">案例子目四</a></li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="about_ri floatr"><!--案例列表开始-->
+        <div class="about_ri_top">案例子目一</div>
+        <div class="anli_ri_bot">
+          <ul>
+            <li><a href="#"><img src="tupian/bei.jpg" width="280" height="175"></a><p><a href="#" class="an_zi">案例一</a></p></li>
+            <li><a href="#"><img src="tupian/huo.jpg" width="280" height="175"></a><p><a href="#" class="an_zi">案例二</a></p></li>
+            <li><a href="#"><img src="tupian/huoer.jpg" width="280" height="175"></a><p><a href="#" class="an_zi">案例三</a></p></li>
+            <li><a href="#"><img src="tupian/bei.jpg" width="280" height="175"></a><p><a href="#" class="an_zi">案例一</a></p></li>
+            <li><a href="#"><img src="tupian/huo.jpg" width="280" height="175"></a><p><a href="#" class="an_zi">案例二</a></p></li>
+            <li><a href="#"><img src="tupian/huoer.jpg" width="280" height="175"></a><p><a href="#" class="an_zi">案例三</a></p></li>
+            <li><a href="#"><img src="tupian/bei.jpg" width="280" height="175"></a><p><a href="#" class="an_zi">案例一</a></p></li>
+            <li><a href="#"><img src="tupian/huo.jpg" width="280" height="175"></a><p><a href="#" class="an_zi">案例二</a></p></li>
+            <li><a href="#"><img src="tupian/huoer.jpg" width="280" height="175"></a><p><a href="#" class="an_zi">案例三</a></p></li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+        <div class="fenye"><!--分页开始-->
+          <div class="fenyetubiao floatl"><a href="#"><img src="images/fenye1.png" width="15" height="15"></a></div><!--第一页-->
+          <div class="fenyetubiao2 floatl"><a href="#"><img src="images/fenye2.png" width="15" height="17"></a></div><!--上一页-->
+          <div class="yeshu floatl">
+            <div class="floatl">
+              <a href="#">1</a></div><div class="floatl"><a href="#">2</a></div><div class="floatl"><a href="#">3</a></div><div class="floatl"><a href="#">4</a></div><div class="floatl"><a href="#">5</a></div><div class="floatl"><a href="#">6</a></div><div class="floatl"><a href="#">7</a></div><div class="floatl"><a href="#">8</a></div><div class="floatl"><a href="#">9</a></div><div class="floatl"><a href="#">10</a>
+          </div>
+          </div>
+          <div class="fenyetubiao2 floatl"><a href="#"><img src="images/fenye3.png" width="16" height="17"></a></div><!--下一页-->
+          <div class="fenyetubiao floatl"><a href="#"><img src="images/fenye4.png" width="15" height="15"></a></div><!--末页-->
+        </div><!--分页结束-->
+      </div><!--案例列表结束-->
+      <div class="clear"></div>
+    </div>
+  </div><!--中间内容结束-->
+  {/block}
+
+
+

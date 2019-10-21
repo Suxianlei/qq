@@ -1,0 +1,64 @@
+{extend name="index/common" /}
+
+{block name="title"}新闻详情{/block}
+
+{block name="head_limit"}
+<div class="head2">
+  {/block}
+
+  {block name="dao_hang"}
+  <li><a href="<{:url('Index/index')}>" target="_blank">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+  <li><a href="<{:url('Index/about')}>" target="_blank">关于我们</a></li>
+  <li><a href="<{:url('Index/about')}>" target="_blank">团队风采</a></li>
+  <li><a href="<{:url('Index/goods')}>" target="_blank">产品展示</a></li>
+  <li><a href="<{:url('Index/news')}>" target="_blank" id="hover_m">新闻中心</a></li>
+  <li><a href="<{:url('Index/an_li')}>" target="_blank">案例展示</a></li>
+  <li><a href="<{:url('Index/ren_cai')}>" target="_blank">人才加盟</a></li>
+  <li><a href="<{:url('Index/about')}>" target="_blank">联系我们</a></li>
+  <div class="clear"></div>
+  {/block}
+
+  {block name="content_text"}
+  <div class="mid_con"><!--中间内容开始-->
+    <div class="dingwei"><a href="#">首页</a>><a href="#">新闻中心</a>><a href="#">新闻详情</a></div>
+    <div class="about">
+      <div class="anli_le floatl"><!--左边详情-->
+        <div class="news_tit"><{$news_info.title}></div>
+        <div class="news_con">
+          <div class="news_con_le floatl">
+            <span>发布时间：<{$news_info.title}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来源：云南好医生</span>
+            <small><{$news_info.score}></small>
+          </div>
+          <div class="news_con_ri floatr">
+            <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+            <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date())];</script>
+          </div>
+          <div class="clear"></div>
+          <div class="news_con_con">
+            <{$news_info.article}>
+            </div>
+        </div>
+      </div><!--左边详情结束-->
+      <div class="anli_ri_1 floatr"><!--右边相关-->
+        <div class="anli_ri_top_1">相关新闻</div>
+        <div class="news_ri_bot_1">
+          <ul>
+            <li><a href="#">1、热烈祝贺云南好医生官网上线</a></li>
+            <li><a href="#">2、热烈祝贺云南好医生官网上线</a></li>
+            <li><a href="#">3、热烈祝贺云南好医生官网上线</a></li>
+            <li><a href="#">4、热烈祝贺云南好医生官网上线</a></li>
+            <li><a href="#">5、热烈祝贺云南好医生官网上线</a></li>
+            <li><a href="#">6、热烈祝贺云南好医生官网上线</a></li>
+            <li><a href="#">7、热烈祝贺云南好医生官网上线</a></li>
+            <li><a href="#">8、热烈祝贺云南好医生官网上线</a></li>
+            <li><a href="#">9、热烈祝贺云南好医生官网上线</a></li>
+            <li><a href="#">10、热烈祝贺云南好医生官网上线</a></li>
+          </ul>
+        </div>
+      </div><!--右边相关结束-->
+      <div class="clear"></div>
+    </div>
+  </div><!--中间内容结束-->
+  {/block}
+
+

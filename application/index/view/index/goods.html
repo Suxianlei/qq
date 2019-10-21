@@ -1,0 +1,81 @@
+{extend name="index/common" /}
+
+{block name="title"}产品展示{/block}
+
+{block name="head_limit"}
+  <div class="head2">
+{/block}
+
+{block name="dao_hang"}
+  <li><a href="<{:url('Index/index')}>" target="_blank">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+  <li><a href="<{:url('Index/about')}>" target="_blank">关于我们</a></li>
+  <li><a href="<{:url('Index/honour')}>" target="_blank">团队风采</a></li>
+  <li><a href="<{:url('Index/goods')}>" target="_blank" id="hover_m">产品展示</a></li>
+  <li><a href="<{:url('Index/news')}>" target="_blank">新闻中心</a></li>
+  <li><a href="<{:url('Index/an_li')}>" target="_blank">案例展示</a></li>
+  <li><a href="<{:url('Index/ren_cai')}>" target="_blank">人才加盟</a></li>
+  <li><a href="<{:url('Index/about')}>" target="_blank">联系我们</a></li>
+  <div class="clear"></div>
+{/block}
+
+{block name="content_text"}
+ <div class="mid_con"><!--中间内容开始-->
+  <div class="dingwei"><a href="#">首页</a>><a href="#">产品展示</a></div>
+  <div class="about">
+    <div class="about_le floatl">
+      <div class="about_le_top">产品展示</div>
+      <div class="about_le_bot">
+        <ul>
+          <li><a href="#" target="_blank" id="hov">感冒发热类</a></li>
+          <li><a href="#" target="_blank">止咳化痰类</a></li>
+          <li><a href="#" target="_blank">呼吸系统类</a></li>
+          <li><a href="#" target="_blank">筋骨类</a></li>
+          <li><a href="#" target="_blank">抗菌消炎类</a></li>
+          <li><a href="#" target="_blank">五官科类</a></li>
+          <li><a href="#" target="_blank">妇科类</a></li>
+          <li><a href="#" target="_blank">肝胆类</a></li>
+          <li><a href="#" target="_blank">补益安神类</a></li>
+          <li><a href="#" target="_blank">中药饮片</a></li>
+          <div class="clear"></div>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="about_ri floatr"><!--案例列表开始-->
+      <div class="about_ri_top">感冒发热类</div>
+      <div class="goods_ri_bot">
+        <ul>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods1.jpg" width="182" height="182"></a><p><a href="#">阿胶补血膏</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods2.jpg" width="182" height="182"></a><p><a href="#">半厦露颗粒-01</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods3.jpg" width="182" height="182"></a><p><a href="#">布洛芬泽-01</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods4.jpg" width="182" height="182"></a><p><a href="#">肠胃宁片-01</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods5.jpg" width="182" height="182"></a><p><a href="#">风寒感冒颗粒</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods6.jpg" width="182" height="182"></a><p><a href="#">风热感冒颗粒</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods7.jpg" width="182" height="182"></a><p><a href="#">感冒灵颗粒</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods8.jpg" width="182" height="182"></a><p><a href="#">抗病毒口服液-01</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods9.jpg" width="182" height="182"></a><p><a href="#">六味地黄-01</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods10.jpg" width="182" height="182"></a><p><a href="#">三七</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods11.jpg" width="182" height="182"></a><p><a href="#">风寒感冒颗粒</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods12.jpg" width="182" height="182"></a><p><a href="#">天麻</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods13.jpg" width="182" height="182"></a><p><a href="#">益气养血口服液</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods14.jpg" width="182" height="182"></a><p><a href="#">银黄颗粒-01</a></p></li>
+          <li><a href="#" target="_blank" class="good_tu"><img src="tupian/goods5.jpg" width="182" height="182"></a><p><a href="#">风寒感冒颗粒</a></p></li>
+          <div class="clear"></div>
+        </ul>
+      </div>
+      <div class="fenye"><!--分页开始-->
+        <div class="fenyetubiao floatl"><a href="#"><img src="images/fenye1.png" width="15" height="15"></a></div><!--第一页-->
+        <div class="fenyetubiao2 floatl"><a href="#"><img src="images/fenye2.png" width="15" height="17"></a></div><!--上一页-->
+        <div class="yeshu floatl">
+          <div class="floatl">
+            <a href="#">1</a></div><div class="floatl"><a href="#">2</a></div><div class="floatl"><a href="#">3</a></div><div class="floatl"><a href="#">4</a></div><div class="floatl"><a href="#">5</a></div><div class="floatl"><a href="#">6</a></div><div class="floatl"><a href="#">7</a></div><div class="floatl"><a href="#">8</a></div><div class="floatl"><a href="#">9</a></div><div class="floatl"><a href="#">10</a>
+        </div>
+        </div>
+        <div class="fenyetubiao2 floatl"><a href="#"><img src="images/fenye3.png" width="16" height="17"></a></div><!--下一页-->
+        <div class="fenyetubiao floatl"><a href="#"><img src="images/fenye4.png" width="15" height="15"></a></div><!--末页-->
+      </div><!--分页结束-->
+    </div><!--案例列表结束-->
+    <div class="clear"></div>
+  </div>
+</div><!--中间内容结束-->
+{/block}

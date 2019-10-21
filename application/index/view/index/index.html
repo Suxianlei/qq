@@ -1,0 +1,312 @@
+{extend name="index/common" /}
+{block name="title"}首页{/block}
+{block name="ke_fu"}
+    <div id="leftsead" style="z-index:999"><!--在线客服-->
+    <ul>
+        <li>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=800022936&site=qq&menu=yes" target="_blank">
+                <div class="hides" style="width:161px;display:none;" id="qq">
+                    <div class="hides" id="p1">
+                        <img src="__IMAGES__/ll04.png" width="47" height="49">
+                    </div>
+                    <div class="hides" id="p2"><span style="color:#FFF;font-size:13px"><{$web_set_res.email}></span>
+                    </div>
+                </div>
+                <img src="__IMAGES__/l04.png" width="47" height="49" class="shows">
+            </a>
+        </li>
+        <li id="tel">
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:161px;display:none;" id="tels">
+                    <div class="hides" id="p1">
+                        <img src="__IMAGES__/ll05.png" width="49" height="49">
+                    </div>
+                    <div class="hides" id="p3"><span style="color:#FFF;font-size:12px"><{$web_set_res.phone}></span>
+                    </div>
+                </div>
+                <img src="__IMAGES__/l05.png" width="47" height="49" class="shows">
+            </a>
+        </li>
+        <li id="btn">
+            <a id="top_btn">
+                <div class="hides" style="width:161px;display:none">
+                    <img src="__IMAGES__/ll06.png" width="161" height="49">
+                </div>
+                <img src="__IMAGES__/l06.png" width="47" height="49" class="shows">
+            </a>
+        </li>
+    </ul>
+</div><!--在线客服结束-->
+{/block}
+
+{block name="head_limit"}
+    <div class="head">
+{/block}
+
+{block name="banner"}
+    <div class="banner"><!--banner开始-->
+    <div class="banner_index">
+        <a href="javascript:void(0);" class="btn btnPre" id="banner_index_pre"></a>
+        <a href="javascript:void(0);" class="btn btnNext" id="banner_index_next"></a>
+        <ul class="banner_wrap" id="banner_index">
+            <li><a href="#" target="_blank"><img src="__TUPIAN__/banner1.jpg" width="1346" height="577"></a></li>
+            <li><a href="#" target="_blank"><img src="__TUPIAN__/banner1.jpg" width="1346" height="577"></a></li>
+            <li><a href="#" target="_blank"><img src="__TUPIAN__/banner1.jpg" width="1346" height="577"></a></li>
+            <li><a href="#" target="_blank"><img src="__TUPIAN__/banner1.jpg" width="1346" height="577"></a></li>
+        </ul>
+    </div>
+</div><!--banner结束-->
+        <script type="text/javascript">
+            var ShowPre1 = new ShowPre({box:"banner_index",Pre:"banner_index_pre",Next:"banner_index_next",numIco:"index_numIco",loop:1,auto:1});
+        </script>
+{/block}
+
+{block name="dao_hang"}
+    <li><a href="<{:url('Index/index')}>" target="_blank" id="hover_m">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+    <li><a href="<{:url('Index/about')}>" target="_blank">关于我们</a></li>
+    <li><a href="<{:url('Index/honour')}>" target="_blank">团队风采</a></li>
+    <li><a href="<{:url('Index/goods')}>" target="_blank">产品展示</a></li>
+    <li><a href="<{:url('Index/news')}>" target="_blank">新闻中心</a></li>
+    <li><a href="<{:url('Index/an_li')}>" target="_blank">案例展示</a></li>
+    <li><a href="<{:url('Index/ren_cai')}>" target="_blank">人才加盟</a></li>
+    <li><a href="<{:url('Index/about')}>" target="_blank">联系我们</a></li>
+    <div class="clear"></div>
+{/block}
+
+{block name="content_text"}
+    <div class="ad"><img src="__TUPIAN__/ad.jpg" width="1346" height="97"></div>
+    <div class="mid_con"><!--中间部分开始-->
+        <div class="guanyu floatl"><!--关于我们开始-->
+            <div class="guanyu_top">
+                <div class="guanyu_top_le floatl">关于我们</div>
+                <div class="guanyu_top_ri floatr"><a href="#">MORE>></a></div>
+                <div class="clear"></div>
+            </div>
+            <div class="guanyu_con">
+                <img src="__IMAGES__/logo_2.png" width="69" height="65">
+                <p>
+                    好医生药业集团创立于1998年，秉承"做好人制好药"的企业理念，恪守医药行业本质，致力于医药制造、中药材种（养）植和中药饮片生产，现成为拥有四川成都、绵阳、西昌、山西大同和运城五个制药生产基地、7家GMP制药厂的现代化药业集团。</p>
+                <p>集团位居中国成长百强企业第32位，成为中国最具公信力品牌之一，"好医生"商标为中国驰名商标为中国驰名商标，品牌市值已超百亿，品牌深入人心，品质更是无可挑剔，有着非常广泛的忠实消费群体。</p>
+                <p>2010年荣获"中国制药行业百强影......<a href="#">(点击查看详情)</a></p>
+            </div>
+        </div><!--关于我们结束-->
+        <div class="news_s floatl"><!--新闻中心开始-->
+            <div class="news_s_top">
+                <div class="news_s_top_le floatl">新闻中心</div>
+                <div class="news_s_top_ri floatr"><a href="#">MORE>></a></div>
+                <div class="clear"></div>
+            </div>
+            <div id="up_zzjs">
+                <ul id="marqueebox">
+                    {foreach $news_res as $val}
+                        <li id="up_li">
+                            <div class="wenzi floatl"><a href="<{:url('Index/news_nei',array('id'=>$val['id']))}>"><{$val.title}></a></div>
+                            <div class="liulan floatr"><a href="#"><{$val.score}></a></div>
+                        </li>
+                    {/foreach}
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            <script language="javascript">
+                function startmarquee(lh, speed, delay) {
+                    var p = false;
+                    var t;
+                    var o = document.getElementById("marqueebox");
+                    o.innerHTML += o.innerHTML;
+                    o.style.marginTop = 0;
+                    o.onmouseover = function () {
+                        p = true;
+                    }
+                    o.onmouseout = function () {
+                        p = false;
+                    }
+
+                    //欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+                    function start() {
+                        t = setInterval(scrolling, speed);
+                        if (!p) o.style.marginTop = parseInt(o.style.marginTop) - 1 + "px";
+                    }
+
+                    //欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+                    function scrolling() {
+                        if (parseInt(o.style.marginTop) % lh != 0) {
+                            o.style.marginTop = parseInt(o.style.marginTop) - 1 + "px";
+                            if (Math.abs(parseInt(o.style.marginTop)) >= o.scrollHeight / 2) o.style.marginTop = 0;
+                        } else {
+                            clearInterval(t);
+                            setTimeout(start, delay);
+                        }
+                    }//欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+                    setTimeout(start, delay);
+                }//欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+                startmarquee(30, 30, 1500);
+            </script>
+        </div><!--新闻中心结束-->
+        <div class="lianxi floatr">
+            <a href="#" target="_blank"><img src="__TUPIAN__/lianxi.jpg" width="371" height="122"></a>
+            <a href="#" target="_blank"><img src="__TUPIAN__/rencai.jpg" width="371" height="122"></a>
+        </div>
+        <div class="clear"></div>
+        <div class="anli_s"><!--案例展示开始-->
+            <div class="anli_s_top">
+                <div class="anli_s_top_le floatl">案例展示</div>
+                <div class="anli_s_top_ri floatr"><a href="#">MORE>></a></div>
+                <div class="clear"></div>
+            </div>
+            <div class="anli_s_con">
+                <div class="scrollImgList1" id="scrollImgList1">
+                    <div class="LeftBotton" onmousedown="ISL_GoUp_1()" onmouseup="ISL_StopUp_1()"
+                         onmouseout="ISL_StopUp_1()"></div>
+                    <div class="Cont" id="ISL_Cont_1">
+                        <div class="ScrCont">
+                            <div id="List1_1">
+                                <!-- 图片列表 begin -->
+                                {foreach $an_li_res as $val}
+                                <div class="box">
+                                    <a href="<{:url('Index/an_li_nei',array('id'=>$val['id']))}>" target="_blank"><img src="__UPLOAD__/<{$val.pic_url}>" width="280" height="175"></a>
+                                    <p><a href="<{:url('Index/an_li_nei',array('id'=>$val['id']))}>" target="_blank"><{$val.name}></a></p>
+                                </div>
+                                {/foreach}
+                                <!-- 图片列表 end -->
+                            </div>
+                            <div id="List2_1"></div>
+                        </div>
+                    </div>
+                    <div class="RightBotton" onmousedown="ISL_GoDown_1()" onmouseup="ISL_StopDown_1()"
+                         onmouseout="ISL_StopDown_1()"></div>
+                </div>
+            </div>
+        </div><!--案例展示结束-->
+    </div><!--中间部分结束-->
+{/block}
+
+{block name="js"}
+        <script language="javascript" type="text/javascript">
+            var Speed_1 = 8; //速度(毫秒)
+            var Space_1 = 6; //每次移动(px)
+            var PageWidth_1 = 302; //翻页宽度
+            var fill_1 = 0; //整体移位
+            var MoveLock_1 = false;
+            var MoveTimeObj_1;
+            var MoveWay_1 = "right";
+            var Comp_1 = 0;
+            var AutoPlayObj_1 = null;
+            GetObj("List2_1").innerHTML = GetObj("List1_1").innerHTML;
+            GetObj('ISL_Cont_1').scrollLeft = fill_1 >= 0 ? fill_1 : GetObj('List1_1').scrollWidth - Math.abs(fill_1);
+            GetObj("ISL_Cont_1").onmouseover = function () {
+                clearInterval(AutoPlayObj_1)
+            }
+            GetObj("ISL_Cont_1").onmouseout = function () {
+                AutoPlay_1()
+            }
+            AutoPlay_1();
+
+            function GetObj(objName) {
+                if (document.getElementById) {
+                    return eval('document.getElementById("' + objName + '")')
+                } else {
+                    return eval('document.all.' + objName)
+                }
+            }
+
+            function AutoPlay_1() {
+                clearInterval(AutoPlayObj_1);
+                AutoPlayObj_1 = setInterval('ISL_GoDown_1();ISL_StopDown_1();', 2000)
+            }
+
+            function ISL_GoUp_1() {
+                if (MoveLock_1) return;
+                clearInterval(AutoPlayObj_1);
+                MoveLock_1 = true;
+                MoveWay_1 = "left";
+                MoveTimeObj_1 = setInterval('ISL_ScrUp_1();', Speed_1);
+            }
+
+            function ISL_StopUp_1() {
+                if (MoveWay_1 == "right") {
+                    return
+                }
+                ;clearInterval(MoveTimeObj_1);
+                if ((GetObj('ISL_Cont_1').scrollLeft - fill_1) % PageWidth_1 != 0) {
+                    Comp_1 = fill_1 - (GetObj('ISL_Cont_1').scrollLeft % PageWidth_1);
+                    CompScr_1()
+                } else {
+                    MoveLock_1 = false
+                }
+                AutoPlay_1()
+            }
+
+            function ISL_ScrUp_1() {
+                if (GetObj('ISL_Cont_1').scrollLeft <= 0) {
+                    GetObj('ISL_Cont_1').scrollLeft = GetObj('ISL_Cont_1').scrollLeft + GetObj('List1_1').offsetWidth
+                }
+                GetObj('ISL_Cont_1').scrollLeft -= Space_1
+            }
+
+            function ISL_GoDown_1() {
+                clearInterval(MoveTimeObj_1);
+                if (MoveLock_1) return;
+                clearInterval(AutoPlayObj_1);
+                MoveLock_1 = true;
+                MoveWay_1 = "right";
+                ISL_ScrDown_1();
+                MoveTimeObj_1 = setInterval('ISL_ScrDown_1()', Speed_1)
+            }
+
+            function ISL_StopDown_1() {
+                if (MoveWay_1 == "left") {
+                    return
+                }
+                ;clearInterval(MoveTimeObj_1);
+                if (GetObj('ISL_Cont_1').scrollLeft % PageWidth_1 - (fill_1 >= 0 ? fill_1 : fill_1 + 1) != 0) {
+                    Comp_1 = PageWidth_1 - GetObj('ISL_Cont_1').scrollLeft % PageWidth_1 + fill_1;
+                    CompScr_1()
+                } else {
+                    MoveLock_1 = false
+                }
+                AutoPlay_1()
+            }
+
+            function ISL_ScrDown_1() {
+                if (GetObj('ISL_Cont_1').scrollLeft >= GetObj('List1_1').scrollWidth) {
+                    GetObj('ISL_Cont_1').scrollLeft = GetObj('ISL_Cont_1').scrollLeft - GetObj('List1_1').scrollWidth
+                }
+                GetObj('ISL_Cont_1').scrollLeft += Space_1
+            }
+
+            function CompScr_1() {
+                if (Comp_1 == 0) {
+                    MoveLock_1 = false;
+                    return
+                }
+                var num, TempSpeed = Speed_1, TempSpace = Space_1;
+                if (Math.abs(Comp_1) < PageWidth_1 / 2) {
+                    TempSpace = Math.round(Math.abs(Comp_1 / Space_1));
+                    if (TempSpace < 1) {
+                        TempSpace = 1
+                    }
+                }
+                if (Comp_1 < 0) {
+                    if (Comp_1 < -TempSpace) {
+                        Comp_1 += TempSpace;
+                        num = TempSpace
+                    } else {
+                        num = -Comp_1;
+                        Comp_1 = 0
+                    }
+                    GetObj('ISL_Cont_1').scrollLeft -= num;
+                    setTimeout('CompScr_1()', TempSpeed)
+                } else {
+                    if (Comp_1 > TempSpace) {
+                        Comp_1 -= TempSpace;
+                        num = TempSpace
+                    } else {
+                        num = Comp_1;
+                        Comp_1 = 0
+                    }
+                    GetObj('ISL_Cont_1').scrollLeft += num;
+                    setTimeout('CompScr_1()', TempSpeed)
+                }
+            }
+        </script>
+{/block}
